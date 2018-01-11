@@ -1,0 +1,19 @@
+.oauth-box {
+  width: 400px;
+  border: 10px solid #AAA;
+  background-color: #EEE;
+  padding: 8px 20px;
+  margin: auto;
+}
+.text-muted {
+  color: #888;
+  font-size: 81.5%;
+}
+.btn-primary {
+  background-color: #0051FF;
+  border: 1px solid #AAA;
+  font-size: 100%;
+  color: #FFF;
+  padding: 4px 20px;
+  cursor: pointer;
+}
