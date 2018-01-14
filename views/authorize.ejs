@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="oauth-box">
-    <form method="post">
+    <form action="/OAuth2/authorize" method="post">
         <h3>应用授权</h3>
         <hr>
         <p><%= loginUserId %>，你确定要授权给应用 <strong><%= appInfo.name %></strong> 吗？</p>
