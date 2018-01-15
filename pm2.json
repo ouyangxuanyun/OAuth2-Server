@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "OAuth2",
+      "script": "www",
+      "instances"  : "4",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "cwd": "E:/GitLab_Space/OAuth2-Server/bin",
+      "env": {
+        "NODE_ENV": "production",
+        "AWESOME_SERVICE_API_TOKEN": "xxx"
+      },
+      "log_file": "./examples/child.log",
+      "error_file": "./examples/child-err.log",
+      "out_file": "./examples/child-out.log",
+      "pid_file": "./examples/child.pid",
+      "exec_mode"  : "fork",
+      "port"       : 9005
+    }
+  ]
+}
