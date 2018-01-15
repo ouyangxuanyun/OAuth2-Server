@@ -7,8 +7,8 @@ var router = express.Router();
 // });
 
 
-router.get('/', function(req, res, next) {
-    res.render('authorize', { loginUserId: 'Fu',appInfo:{name:'微信哈哈',description:'自创应用'} });
+router.get('/', function (req, res, next) {
+    res.json({res: "success"});
 });
 
 module.exports = router;

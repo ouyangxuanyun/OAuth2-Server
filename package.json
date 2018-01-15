@@ -11,7 +11,11 @@
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
     "express": "~4.15.2",
+    "js2xmlparser": "^3.0.0",
     "morgan": "~1.8.1",
+    "redis": "^2.8.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
     "serve-favicon": "~2.4.2"
   }
 }
