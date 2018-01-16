@@ -50,12 +50,17 @@ class APIClient {
         if (method === 'GET' || method === 'HEAD') {
             requestParams.qs = params;
         } else {
-            requestParams.formData = params;
+            // requestParams.formData = params;
+            requestParams.json = true;
+            requestParams.body = params;
         }
 
-        rq(requestParams)
+        return rq(requestParams)
             .then(body => {
-                let data = JSON.parse(body.toString());
+
+                console.log('-------------------------',body)
+                // let data = JSON.parse(body.toString());
+                let data = JSON.parse(JSON.stringify(body));
                 if (data.status !== 'OK') {
                     return {
                         code: data.error_code,
@@ -72,12 +77,19 @@ class APIClient {
     // 获取access_token
     requestAccessToken(code) {
         let _this = this;
-        this.request('post', API_OAUTH2_ACCESS_TOKEN, {
+        console.log('444444555555555', {
+            code: code,
+            client_id: this.appKey,
+            client_secret: this.appSecret,
+            redirect_uri: this.callbackUrl
+        })
+        return this.request('post', API_OAUTH2_ACCESS_TOKEN, {
             code: code,
             client_id: this.appKey,
             client_secret: this.appSecret,
             redirect_uri: this.callbackUrl
         }).then(ret => {
+            console.log(555, ret)
             if (ret) _this.accessToken = ret.access_token;
             return ret;
         });
@@ -85,6 +97,7 @@ class APIClient {
 
     // 查询文章列表
     getArticles(params, callback) {
+        console.log(7666667777676767667)
         return this.request('get', API_ARTICLES, params);
     };
 }
