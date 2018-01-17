@@ -1,6 +1,13 @@
 # OAuth2-Server
 a NodeJs OAuth2 Server
 
+## install & run
+$ git clone https://github.com/ouyangxuanyun/OAuth2-Server
+$ cd OAuth2-Server
+$ npm install
+$ node ./bin/www
+Magic happen at port 3000 说明服务正常运行，访问 http://127.0.0.1:3000/example 接口即可
+
 ## step by step
 
 1 引导需要授权的用户到Web授权页面 https://localhost:3000/oauth2/authorize?clientid=XX&response_type=XX&redirect_uri=XX
